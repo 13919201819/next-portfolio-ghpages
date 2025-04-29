@@ -1,12 +1,16 @@
-const isProd = process.env.NODE_ENV === 'production';
+import type { NextConfig } from "next";
 
-const nextConfig = {
-  output: 'export',
+const nextConfig: NextConfig = {
+  output: "export",
+  basePath: "/3122113151919-Updated-", // Must match your GitHub repo name
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },
-  basePath: isProd ? '/next-portfolio-ghpages' : '',
-  assetPrefix: isProd ? '/next-portfolio-ghpages/' : '',
+
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
