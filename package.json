@@ -2,11 +2,13 @@
     "name": "clumoss4.0",
     "version": "0.1.0",
     "private": true,
+
+    "homepage": "https://13919201819.github.io/next-portfolio-ghpages",
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
+        "build": "next build && next exports",
         "start": "next start",
-        "deploy": "next build",
+        "deploy": "npm run build && gh-pages -d out",
         "lint": "next lint"
     },
     "dependencies": {
